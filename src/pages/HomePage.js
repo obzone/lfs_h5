@@ -26,12 +26,12 @@ const RouteWithSidebar = ({ component: Component, ...rest }) => {
       render={(props) => (
         <>
           <Preloader show={loaded ? false : true} />
-          <Sidebar />
+          {/* <Sidebar /> */}
 
           <main className="content">
-            <Navbar />
+            {/* <Navbar /> */}
             <Component {...props} />
-            <Footer />
+            {/* <Footer /> */}
           </main>
         </>
       )}

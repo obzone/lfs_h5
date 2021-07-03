@@ -1,13 +1,13 @@
 import React from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useGetKnowledgeQuery } from "../../composers/knowledge";
 import Loading from "../../components/Loading";
+import Image from "../../components/Image";
 
 import { Col, Row, Card, Form, Button } from "@themesberg/react-bootstrap";
 
 export default () => {
   const { id } = useParams();
-  const history = useHistory();
   const [knowledge = {}, loading, error] = useGetKnowledgeQuery(id);
   const { title, abstract, subtitle, cover, body } = knowledge;
   return (
@@ -47,6 +47,13 @@ export default () => {
                   </Row>
                   <Row>
                     <Col md={12} className="mb-3">
+                      <Form.Group id="abstract">
+                        <Image src={cover} />
+                      </Form.Group>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12} className="mb-3">
                       <Form.Group id="body">
                         <Form.Label
                           dangerouslySetInnerHTML={{ __html: body }}
@@ -54,15 +61,6 @@ export default () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <div className="mt-3">
-                    <Button
-                      variant="primary"
-                      className="me-2"
-                      onClick={history.goBack}
-                    >
-                      返回
-                    </Button>
-                  </div>
                 </Form>
               </Card.Body>
             </Card>

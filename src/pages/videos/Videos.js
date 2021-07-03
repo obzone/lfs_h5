@@ -8,7 +8,8 @@ import { VideosTable } from "../../components/Tables";
 export default () => {
   return (
     <>
-      <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+      <div style={{ marginTop: "40px" }}></div>
+      {/* <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <div className="d-block mb-4 mb-md-0">
           <Breadcrumb
             className="d-none d-md-inline-block"
@@ -21,7 +22,7 @@ export default () => {
           </Breadcrumb>
           <h4>视频</h4>
         </div>
-      </div>
+      </div> */}
 
       <VideosTable />
     </>
