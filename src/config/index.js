@@ -3,5 +3,5 @@ module.exports = {
   qiniu_upload_host:
     process.env.QINIU_UPLOAD_HOST || "https://up-z0.qiniup.com",
   qiniu_display_domain:
-    process.env.QINIU_DISPLAY_DOMAIN || "http://cdn.ibreathe.cn",
+    process.env.QINIU_DISPLAY_DOMAIN || "https://cdn.ibreathe.cn",
 };
